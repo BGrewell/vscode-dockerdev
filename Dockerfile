@@ -15,8 +15,7 @@ RUN apt update \
     && go build -o gocode-gomod github.com/stamblerre/gocode \
     && mv gocode-gomod $GOPATH/bin/
 # Install other tools
-ENV GO111MODULE=on
-RUN go get golang.org/x/tools/gopls@latest
+RUN GO111MODULE=on go get golang.org/x/tools/gopls@latest
 RUN go get -u -v github.com/mdempsky/gocode
 RUN go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
 RUN go get -u -v github.com/ramya-rao-a/go-outline
