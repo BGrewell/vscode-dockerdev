@@ -27,7 +27,7 @@ RUN go get -u -v github.com/stamblerre/gocode
 RUN go get -u -v github.com/rogpeppe/godef
 RUN go get -u -v golang.org/x/tools/cmd/goimports
 RUN go get -u -v golang.org/x/lint/golint
-    # Cleanup
+# Cleanup
 RUN apt-get autoremove -y
 RUN apt-get clean -y
 RUN rm -rf /var/lib/apt/lists/*
